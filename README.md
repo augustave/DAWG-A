@@ -1,4 +1,4 @@
-# GITHUB-A
+# DAWG-A
 
 Static web animation for the DAWG-A procedural doctrine architecture sequence.
 
