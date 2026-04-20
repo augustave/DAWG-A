@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Procedural Doctrine Architecture</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="doctrine-sheet">
+      <header class="command-bar">
+        <div>
+          <p class="kicker">Procedural Doctrine Architecture</p>
+          <h1>DAWG-A</h1>
+        </div>
+        <div class="command-states" aria-label="System states">
+          <span class="state state-blue">OPS LINKED</span>
+          <span class="state state-green">SCAN ACTIVE</span>
+          <span class="state state-orange">SURGE WATCH</span>
+        </div>
+      </header>
+
+      <section class="matrix">
+        <aside class="module manifest" aria-label="Frame manifest">
+          <header class="module-header">
+            <span>Manifest</span>
+            <span>12 IMG</span>
+          </header>
+          <ol class="manifest-list" id="manifestList"></ol>
+        </aside>
+
+        <section class="module viewport" aria-label="DAWG-A screenshot animation player">
+          <header class="module-header">
+            <span>Macro-Synthesis Feed</span>
+            <span id="viewportState">AUTO RUN</span>
+          </header>
+          <div class="stage" id="stage">
+            <img class="stage-image stage-image-a is-visible" id="imageA" alt="">
+            <img class="stage-image stage-image-b" id="imageB" alt="">
+          </div>
+        </section>
+
+        <aside class="module telemetry" aria-label="Telemetry">
+          <header class="module-header">
+            <span>Telemetry</span>
+            <span id="framePercent">000%</span>
+          </header>
+          <div class="telemetry-grid">
+            <span>SEQ</span>
+            <strong id="sequenceValue">01 / 12</strong>
+            <span>HOLD</span>
+            <strong id="holdValue">0900 MS</strong>
+            <span>MODE</span>
+            <strong id="modeValue">AUTO</strong>
+            <span>LINK</span>
+            <strong class="blue">NORMAL</strong>
+          </div>
+          <div class="stream" id="pixelStream" aria-hidden="true"></div>
+          <pre class="ascii-map" aria-hidden="true">┌───┬───┬───┐
+│ A │ B │ C │
+├───┼───┼───┤
+│ D │ E │ F │
+└───┴───┴───┘</pre>
+        </aside>
+      </section>
+
+      <section class="control-matrix" aria-label="Animation controls">
+        <div class="transport" aria-label="Transport controls">
+          <button class="icon-button" id="prevButton" type="button" aria-label="Previous frame">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M6 5h2v14H6V5Zm4.2 7L18 5v14l-7.8-7Z"></path>
+            </svg>
+          </button>
+          <button class="play-button" id="playButton" type="button" aria-label="Pause animation">
+            <svg class="pause-icon" aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M7 5h3.5v14H7V5Zm6.5 0H17v14h-3.5V5Z"></path>
+            </svg>
+            <svg class="play-icon" aria-hidden="true" viewBox="0 0 24 24">
+              <path d="m8 5 11 7-11 7V5Z"></path>
+            </svg>
+          </button>
+          <button class="icon-button" id="nextButton" type="button" aria-label="Next frame">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M16 5h2v14h-2V5ZM6 5l7.8 7L6 19V5Z"></path>
+            </svg>
+          </button>
+        </div>
+
+        <div class="scrubber-group">
+          <div class="range-row">
+            <span>Frame Index</span>
+            <input id="scrubber" class="scrubber" type="range" min="0" max="11" value="0" step="1" aria-label="Frame position">
+          </div>
+          <div class="thumbnail-strip" id="thumbnailStrip" aria-label="Frame thumbnails"></div>
+        </div>
+
+        <label class="speed-control" for="speedControl">
+          <span>Cycle Hold</span>
+          <input id="speedControl" type="range" min="450" max="1600" step="50" value="900" aria-label="Playback speed">
+        </label>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
